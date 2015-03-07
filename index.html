@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FFMPEG ENCODER">
+    <meta name="author" content="KANDOSAN">
+    <link rel="shortcut icon" href="dist/ico/favicon.png">
+
+    <title>FFMPEG SERVER</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/html5shiv.js"></script>
+      <script src="dist/js/respond.min.js"></script>
+    <![endif]-->
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+ $(document).ready(function() {
+ 	 $("#class_check_shared").load("libs/class_check_shared.php");
+   var refreshId = setInterval(function() {
+      $("#class_check_shared").load('libs/class_check_shared.php?randval='+ Math.random());
+
+   }, 1500);
+   $.ajaxSetup({ cache: false });
+});
+</script>
+
+<script>
+ $(document).ready(function() {
+ 	 $("#class_check_queue").load("libs/class_check_queue.php");
+   var refreshId = setInterval(function() {
+      $("#class_check_queue").load('libs/class_check_queue.php?randval='+ Math.random());
+
+   }, 1500);
+   $.ajaxSetup({ cache: false });
+});
+</script>
+
+<script>
+ $(document).ready(function() {
+ 	 $("#class_check_progress").load("libs/class_check_progress.php");
+   var refreshId = setInterval(function() {
+      $("#class_check_progress").load('libs/class_check_progress.php?randval='+ Math.random());
+
+   }, 1500);
+   $.ajaxSetup({ cache: false });
+});
+</script>
+
+<script>
+ $(document).ready(function() {
+ 	 $("#class_check_latest").load("libs/class_check_latest.php");
+   var refreshId = setInterval(function() {
+      $("#class_check_latest").load('libs/class_check_latest.php?randval='+ Math.random());
+
+   }, 1500);
+   $.ajaxSetup({ cache: false });
+});
+</script>
+
+
+<script>
+ $(document).ready(function() {
+ 	 $("#class_check_memory").load("libs/class_check_memory.php");
+   var refreshId = setInterval(function() {
+      $("#class_check_memory").load('libs/class_check_memory.php?randval='+ Math.random());
+
+   }, 1500);
+   $.ajaxSetup({ cache: false });
+});
+</script>
+	
+  </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">FFMPEG</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+               <li><a href="#">
+			   <!-- class_check_queue checks how many files are in downloads folder for encoding -->
+			   <div id="class_check_queue">
+			   </div>
+			   </a>
+			   </li>
+              <li><a href="gallery">
+			  <!-- class_check_shared checks how many files are processed in public folder -->
+			  <div id="class_check_shared">
+			  </div> 
+			  </a>
+			  </li>
+               <li><a href="upload/index.html">
+			   <!-- class_check_queue checks how many files are in downloads folder for encoding -->
+			   Upload
+			   </a>
+			   </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="page-header">
+			<!-- class_check_progress is reporting live progress of ffmpeg output -->
+          <h4><div id="class_check_progress"></h4>
+        </div>
+        <p class="lead">
+		<!-- class_check_latest  checking for latest video encoding  -->
+		 <h4><div id="class_check_latest"></h4>
+		
+		</p> 
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit"> 
+		<!-- class_check_memory checks memory amount on system -->
+		<div id="class_check_memory"></p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap js files -->
+    <script src="dist/js/jquery.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
