@@ -47,7 +47,7 @@ this section is complete move to (b4)<br>
 #HOW TO INSTALL Crontab -e (b4)
  Terminal: crontab -e<br>
 paste this at the end of text<br>
-**/5 * * * * /var/www/bash/grep_ffmpeg.sh<br>
+*/5 * * * * /var/www/bash/grep_ffmpeg.sh<br>
 
 CTRL + X to install this cronjob<br>
 to check if its installed<br>
